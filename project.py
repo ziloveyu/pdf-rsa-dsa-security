@@ -10,7 +10,7 @@ import os
 class CryptoApp:
     def __init__(self, root):
         self.root = root
-        self.root.title("Sistem RSA (Enkripsi) & DSA (Tanda Tangan)")
+        self.root.title("Sistem RSA (Enkripsi) & DSA (Tanda Tangan) by Kelompok 4")
         self.root.geometry("750x600")
 
         # Tab Control
@@ -29,12 +29,12 @@ class CryptoApp:
         self.setup_tab2()
         self.setup_tab3()
 
-    # --- TAB 1: GENERATE KEYS (RSA & DSA) ---
+# halaman tab 1
     def setup_tab1(self):
-        frame = ttk.LabelFrame(self.tab1, text="Pembangkitan Kunci Ganda")
+        frame = ttk.LabelFrame(self.tab1, text="Pembuatan Kunci Ganda")
         frame.pack(padx=20, pady=20, fill="both", expand=True)
 
-        ttk.Label(frame, text="Nama User (misal: Alice):").pack(pady=5)
+        ttk.Label(frame, text="Nama User:").pack(pady=5)
         self.key_name_entry = ttk.Entry(frame)
         self.key_name_entry.pack(pady=5)
 
@@ -76,7 +76,7 @@ class CryptoApp:
         except Exception as e:
             messagebox.showerror("Error", str(e))
 
-    # --- TAB 2: ENCRYPT (RSA) & SIGN (DSA) ---
+#  halaman tab 2
     def setup_tab2(self):
         frame = ttk.LabelFrame(self.tab2, text="Pengirim: Sign (DSA) lalu Encrypt (RSA)")
         frame.pack(padx=20, pady=20, fill="both", expand=True)
@@ -157,7 +157,7 @@ class CryptoApp:
         except Exception as e:
             messagebox.showerror("Gagal", str(e))
 
-    # --- TAB 3: DECRYPT (RSA) & VERIFY (DSA) ---
+# halaman tab 3
     def setup_tab3(self):
         frame = ttk.LabelFrame(self.tab3, text="Penerima: Decrypt (RSA) lalu Verify (DSA)")
         frame.pack(padx=20, pady=20, fill="both", expand=True)
